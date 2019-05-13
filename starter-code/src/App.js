@@ -25,34 +25,10 @@ class App extends Component {
     })
     console.log(this.state)
     }
-    handleSubmit(e){
-    e.preventDefault();
-    this.state.onAdd(this.state);
-    }
-    increment(event) {
-    this.setState({
-        value: this.state.value + 1
-    });
-};
-addRow(){
-  this.setState({contacts: this.state.contacts + 1});
-  var listContacts = {id: this.state. contact};
-  var allContact = this.state.contacts.concat([listContacts]);
-  this.setState({contacts: allContact});
-}
-/*addItems(item){
-    this.setState({items:this.state.items.concat(item)})
-      console.log(this.state.items) // this is working
-    }*/
-addContact(){
-  this.setState({contacts: this.state.contacts + 1});
-  let newContact = this.state.contacts.slice();
-  var allContact = this.state.contacts.concat([newContact]);
-  this.setState({
-    items: allContact
-  })
-  console.log(this.state.contacts)
-}
+  addContact(){
+    this.setState({contacts: (Math.floor(Math.random()*5)+1)});
+  }
+
 removeItem(index){
   this.setState({
     items: this.state.contacts.filter((e, i)=>{
@@ -61,31 +37,6 @@ removeItem(index){
   })
 }
 
-
-
-  
-  /*handleClick = () => {
-    let newContact = [];
-    for( var i = 0; i < this.state.contacts.length; i++)
-    newContact.push(contacts[i])
-    
-    this.setState({
-      contacts: newContact(Math.floor(Math.random()*5)+1)
-    })
-    console.log(this.state)
-    }
-
-    /*addContact(){
-      this.setState({contacts: this.state.contacts + 1});
-      let newContacts = this.state.contacts(Math.floor(Math.random()*5) + 1);
-      var totalContacts= this.state.items.concat([newContacts]);
-      this.setState({
-        items: totalContacts
-      })
-      console.log(this.state.contacts)
-    }*/
-  
-   
     deleteItem = (index) => {
       const {contacts} = this.state;
       contacts.splice(index, 1);
