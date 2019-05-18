@@ -16,10 +16,10 @@ const Table = ({name, picture, popularity, deleteContact}) => (
                 <tbody>
                     <tr>
                         <td><img src={picture} alt="picture" width="100px" height="100px" /></td>
-                        <td>{name}</td>
+                        <td id="name">{name}</td>
                         <td>{popularity}</td>
                         <td> <button class="uk-button uk-button-default"
-                        deleteContact={this.deleteContact}><span uk-icon="trash">
+                        onClick={deleteContact}><span uk-icon="trash">
                         </span>
                         </button></td>
                     </tr>

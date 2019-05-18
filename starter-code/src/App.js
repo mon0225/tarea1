@@ -30,15 +30,13 @@ class App extends Component {
 
 deleteContact = (index) => {
       let deleteOne = []
-      for( var i = 0; i < this.state.contacts.length; i++){
-      deleteOne.push((contacts[i]))
       const a = contacts.splice(index, 1);
       console.log(a),
       deleteOne.push((a)),
       this.setState({
         contacts: deleteOne
       })
-    }
+    
   }
   
   render() {
@@ -47,7 +45,7 @@ deleteContact = (index) => {
     return (
       <div className="App">
         <NavBar />
-        <button onClick={this.handleClick}>Random Button</button>   
+        <button id= "random" onClick={this.handleClick}><strong>Random Contact</strong></button>   
         {this.state.contacts.map((artists, i) => {
           return(
             <div>

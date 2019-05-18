@@ -22,7 +22,20 @@
   font-size: large;
 }
 
+#random {
+  height: 40px;
+  margin-bottom: 60px;
+  margin-top: 40px;
+  font-size: 1em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: salmon;
+  color: white;
+  border-radius: 200px;
+}
 
+td #name {
+  padding-top: 200px;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
