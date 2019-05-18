@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Table = ({name, picture, popularity, deleteItem, contacts}) => (
+
+const Table = ({name, picture, popularity, deleteContact}) => (
     <div>
         <center>
             <table style={{widht: '200px'}}  class="uk-table uk-table-small uk-table-divider uk-table-striped">
@@ -17,8 +18,8 @@ const Table = ({name, picture, popularity, deleteItem, contacts}) => (
                         <td><img src={picture} alt="picture" width="100px" height="100px" /></td>
                         <td>{name}</td>
                         <td>{popularity}</td>
-                        <td> <button class="uk-button uk-button-default" contacts={contacts}
-                        deleteItem={this.deleteItem}><span uk-icon="trash">
+                        <td> <button class="uk-button uk-button-default"
+                        deleteContact={this.deleteContact}><span uk-icon="trash">
                         </span>
                         </button></td>
                     </tr>
